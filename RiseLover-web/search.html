@@ -9,6 +9,7 @@
     <!--axios source-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
+    <!--CSS-->
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -32,7 +33,7 @@
                 <span>大约????条结果，耗时????秒。</span>
             </div>
         </div>
-        <ul>
+        <!-- <ul>
             <li>
                 123456
             </li>
@@ -40,7 +41,42 @@
                 <img :src="elem.url">
                 {{ elem.title }}
             </li>
+        </ul> -->
+
+        <ul style="list-style: none;">
+            <li v-for="elem in video_list">
+                <div>
+                    <div class="col-md-2">
+                        <div class="content1">
+                            <img :src="elem.thumbnails" height="100">   
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="search-item">
+                            <div class="content2">
+                                <div class="item-title">
+                                    <h3>
+                                        <a href="https://www.bilibili.com/video/BV1vy4y1i7bS?from=search&seid=5115053688110447257" >
+                                            {{ elem.title }}
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="item-list">
+                                    {{ elem.description }}
+                                </div>
+                                <div class="item-bar">
+                                    <span class="cpill fileType1">{{ elem.channelTitle }}</span>
+                                    <span>发布时间： <b>{{ elem.published }}</b></span>
+                                    <span><b class="cpill yellow-pill">BiliBili</b></span>
+                                    <span>播放量：<b>{{ elem.viewCount }}</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
         </ul>
+
     </div>
 
 
