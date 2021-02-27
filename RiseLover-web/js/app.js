@@ -1,0 +1,44 @@
+new Vue({
+    el:'#app-vue',
+    data(){
+        return {
+            video_list:[],
+            loading: false,
+            user_input: '',
+            video_source: '$all'
+        }
+    },
+    methods:{
+        GetUserInput(){
+            const article ={user_input: this.user_input, video_source: this.video_source}
+            axios.post('http://localhost:8080',article)
+            .then((response) => {
+                this.video_list = response.data
+                window.location.href="./search.html"
+                this.user_input = '';
+            })
+        },
+        GetVideo(){
+            this.loading = true;
+            axios.get('http://localhost:8080')
+            .then((response) => {
+                this.video_list = response.data;
+                this.loading = false;
+            });
+        },
+        BiliBiliSource(){
+            this.video_source = '$bilibili'
+        },
+        TiktokSouce(){
+            this.video_source = '$tiktok'
+        },
+        YoutubeSouce(){
+            this.video_source = '$youtube'
+        },
+        Allsource(){
+            this.video_source = '$all'
+        }
+    }
+})
+
+

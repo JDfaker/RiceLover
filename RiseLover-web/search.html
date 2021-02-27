@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+
+    <!--Vue source-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!--axios source-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="search_page">
+        <div class="header-div">
+            <form class="search-form">
+                <a href="/" title="搜索" class="fl">
+                    <img src="./img/ico_baidu.png" alt="搜索" class="nav-logo"></a>
+                <input type="text" id="search" title="Search"
+                       autocomplete="off" name="q" placeholder="Please enter search keywords" class="fl mt25">
+                <input style="line-height:32px;" type="submit" id="btnSearch" value="Search" class=" blue fl mt25" @click="GetUserInput">
+            </form>
+        </div>
+        <div id="sort-bar">
+            <a href="" rel="nofollow">发布时间</a>
+            <a href="" rel="nofollow">播放量</a>
+            <a href="" rel="nofollow">平台</a>
+        </div>
+        <div id="wall">
+            <div class="search-statu">
+                <span>大约????条结果，耗时????秒。</span>
+            </div>
+        </div>
+        <ul>
+            <li>
+                123456
+            </li>
+            <li v-for="elem in video_list">
+                <img :src="elem.url">
+                {{ elem.title }}
+            </li>
+        </ul>
+    </div>
+
+
+
+<!--js script-->
+<!--VUE script-->
+<script src="js/second.js"></script>
+    
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    $(function () {
+        helangSearch.init();
+    })
+</script>
+</body>
+</html>
