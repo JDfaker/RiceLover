@@ -5,12 +5,13 @@ new Vue({
             video_list:[],
             loading: false,
             user_input: '',
-            video_source: '$all'
+            video_source: 'all',
+            video_date: ''
         }
     },
     methods:{
         GetUserInput(){
-            const article ={user_input: this.user_input, video_source: this.video_source}
+            const article ={user_input: this.user_input, video_source: this.video_source, video_date: this.video_date}
             axios.post('http://localhost:8080',article)
             .then((response) => {
                 this.video_list = response.data
@@ -27,16 +28,16 @@ new Vue({
             });
         },
         BiliBiliSource(){
-            this.video_source = '$bilibili'
+            this.video_source = 'bilibili'
         },
         TiktokSouce(){
-            this.video_source = '$tiktok'
+            this.video_source = 'tiktok'
         },
         YoutubeSouce(){
-            this.video_source = '$youtube'
+            this.video_source = 'youtube'
         },
         Allsource(){
-            this.video_source = '$all'
+            this.video_source = 'all'
         }
     }
 })
