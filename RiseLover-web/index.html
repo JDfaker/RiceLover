@@ -10,6 +10,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     
     <link rel="stylesheet" href="css/index.css">
+    <!--advanced search css-->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <link href="https://cdn.bootcss.com/bootstrap-switch/4.0.0-alpha.1/css/bootstrap-switch.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container" id="app-vue">
@@ -25,6 +29,7 @@
             </ul>
         </div>
         <div class="search" @click="GetUserInput()"></div>
+       
         <div class="info-box">
             <ul>
                 <span>Guess you would like:</span>
@@ -34,12 +39,49 @@
                 <li><a href="{% url 'app:search' %}?q=一路向西">一路向西</a></li>
             </ul>
         </div>
-        <ul>
-            <li v-for="elem in video_list">
-                <img :src="elem.url">
-                {{ elem.title }}
-            </li>
-        </ul>
+    </div>
+    <div class="advancedSearch" id="app">
+        <span>Advanced Search:</span>
+        <el-tooltip :content="'Switch value: ' + value5" placement="top">
+            <el-switch v-model="value5" active-color="#13ce66" inactive-color="#ccc" active-value="true" inactive-value="false" @change="change">
+            </el-switch>
+        </el-tooltip>
+        <transition>
+            <div v-show="isShow">
+                <div>
+                    <form class="bs-example bs-example-form" role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon" style="min-width:70px;">Author</span>
+                                <input type="text" class="form-control" placeholder="Search by auther name">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon" style="min-width:70px;">Source</span>
+                                <select name="" class="form-control" placeholder="Please select">
+                                    <option style='display: none'></option>
+                                    <option value="">All sources</option>
+                                    <option value="">Tiktok</option>
+                                    <option value="">BiliBili</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon" style="min-width:80px;">Category</span>
+                                <select name="" class="form-control" placeholder="Please select">
+                                    <option style='display: none'></option>
+                                    <option value="">All Categories</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </transition>
     </div>
 
 <!--js script-->
@@ -47,11 +89,36 @@
 <script src="js/app.js"></script>
 
 <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
     $(function () {
         helangSearch.init();
     })
+</script>
+<script>
+    var Main = {
+    data() {
+        return {
+            value5: '1',
+            isShow : false,
+        }
+        },
+          methods:{
+            change(data){
+              if(data == "true"){
+                this.isShow = true;
+            }else{
+                this.isShow = false;
+            }
+          }
+        }
+      };
+    var Ctor = Vue.extend(Main)
+    new Ctor().$mount('#app')
 </script>
 </body>
 </html>
