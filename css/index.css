@@ -309,10 +309,15 @@ input[type=submit].blue:active {
 
 .search-statu {
 	margin-bottom: 15px;
-	padding-top: 10px;
+	padding-top: 50px;
     padding-bottom: 10px;
 	border-bottom: 1px solid #e4e4e4;
+	text-align: center;
 	color: #666;
+}
+
+.search-item{
+	margin-top: -15px;
 }
 
 .search-item .item-title h3 b {
@@ -349,6 +354,7 @@ input[type=submit].blue:active {
 	color: #777;
 	font-size: 13px;
 	line-height: 16px;
+	margin-top: 5px;
 }
 
 .search-item .item-bar b {
@@ -440,27 +446,30 @@ input[type=submit].blue:active {
 	background-color: #f89406;
 }
 
-.col-md-2,.col-md-8 {
-	position: relative;
-	min-height: 1px;
-}
-
-@media(min-width:992px) {
-	.col-md-8 {
-		float: left;
-		width: 70%;
-	}
-
-	.col-md-2 {
-		float: left;
-		width: 30%;
-	}
-}
 
 .content {
-    margin: 0 140px;
+    width: 200px;
+	margin: 0 140px;
 }
 
+.result{
+	width: 100%;
+	margin: 0px auto;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.content1{
+	float: left;
+	width: 35%;
+	text-align:right;
+}
+
+.content2{
+	float: left;
+	width: 50%;
+	margin-left: 15px;
+}
 
 .advanced-search{
     width: 500px;
@@ -472,6 +481,11 @@ input[type=submit].blue:active {
 	align-items: center;
 	border: 3px solid #bd94ff
 	
+}
+
+.footer{
+	width: 100%;
+	height: 200px;
 }
 
 .as-title{
