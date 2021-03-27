@@ -10,7 +10,7 @@
 input[type=search] {
   box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.4);
   background: #ffffff;
-  border: 2px solid #e7693b;
+  border: 2px solid #a3bded;
   outline: none;
   width: 400px;
   height: 50px;
@@ -21,7 +21,7 @@ input[type=search] {
   font-family: "Lato", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #e7693b;
+  color: #a3bded;
 }
 
 ::placeholder {
@@ -35,7 +35,7 @@ input[type=search] {
   width: 55px;
   outline: none;
   border-radius: 0 15px 15px 0;
-  background: #e7693b;
+  background: #a3bded;
   color: #ffffff;
   border: none;
   transition: all 0.3s ease;
@@ -57,7 +57,7 @@ footer {
   text-transform: uppercase;
   padding: 10px;
   font-family: "Lato", sans-serif;
-  color: #e7693b;
+  color: #a3bded;
 }
 footer p {
   letter-spacing: 3px;
@@ -71,7 +71,7 @@ footer a {
   padding: 3px;
 }
 footer a:hover {
-  background: #e7693b;
+  background: #a3bded;
   color: #ffffff;
   padding: 3px;
   transition: all 0.3s ease;
