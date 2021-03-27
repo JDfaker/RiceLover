@@ -11,11 +11,12 @@ new Vue({
     },
     methods:{
         GetUserInput(){
+            alert(this.user_input)
             const article ={user_input: this.user_input, video_source: this.video_source, video_date: this.video_date}
             axios.post('http://localhost:8080',article)
             .then((response) => {
-                this.video_list = response.data
-                window.location.href="./search.html"
+                this.video_list = response.data;
+                window.location.href="./search.html";
                 this.user_input = '';
             })
         },

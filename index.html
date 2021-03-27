@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html  >
+<head>
+  <meta charset="UTF-8">
+  <title>First page</title>
+
+  <!--Vue source-->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!--axios source-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+  <!--Search box style-->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="./css/search_box_style.css">
+  
+</head>
+<body>
+
+  <div id="app-vue">
+    <div style="text-align:center; margin-top: 100px;">
+      <img src="./img/fengmian.png"  height="300" width="550">
+    </div>
+
+    <!--Search box-->
+    <div class="search-box" style="z-index:999">
+      <input type="search" placeholder="Search here..." v-model="user_input"/>
+      <button type="submit" class="search-btn" @click="GetUserInput()"><i class="fa fa-search"></i></button>
+    </div>
+  </div>
+
+  
+
+<!--VUE script--------------------------------------------->
+<script src="./js/app.js"></script>
+
+<!-- background code -------------------------------------->
+<script src='./js/gameCanvas-4.0.js'></script>
+<script src='./js/vector-1.0.js'></script>
+<script  src="./js/script.js"></script>
+
+
+</body>
+</html>

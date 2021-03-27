@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,700");
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+input[type=search] {
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.4);
+  background: #ffffff;
+  border: 2px solid #e7693b;
+  outline: none;
+  width: 400px;
+  height: 50px;
+  border-radius: 15px 0 0 15px;
+  font-size: 1.4em;
+  font-weight: 300;
+  padding: 0px 10px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e7693b;
+}
+
+::placeholder {
+  color: #81CCE8;
+  font-size: .8em;
+}
+
+.search-btn {
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.4);
+  height: 50px;
+  width: 55px;
+  outline: none;
+  border-radius: 0 15px 15px 0;
+  background: #e7693b;
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+}
+.search-btn:hover {
+  transition: all 0.3s ease;
+}
+.search-btn:hover i {
+  font-size: 2.5em;
+}
+.search-btn i {
+  font-size: 2.3em;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-transform: uppercase;
+  padding: 10px;
+  font-family: "Lato", sans-serif;
+  color: #e7693b;
+}
+footer p {
+  letter-spacing: 3px;
+  font-size: 10px;
+  color: #ffffff;
+}
+footer a {
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 3px;
+}
+footer a:hover {
+  background: #e7693b;
+  color: #ffffff;
+  padding: 3px;
+  transition: all 0.3s ease;
+}
