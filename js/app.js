@@ -25,7 +25,7 @@ new Vue({
                             least_view_count: this.least_view_count,
                             sort_by: this.sort_by};
             
-            axios.post('http://35.239.68.120:8080/',article)
+            axios.post('http://localhost:8080/',article)
             .then((response) => {
                 this.video_list = response.data;
                 this.user_input = '';
@@ -33,7 +33,7 @@ new Vue({
         },
         GetVideo(){
             this.loading = true;
-            axios.get('http://35.239.68.120:8080/')
+            axios.get('http://localhost:8080/')
             .then((response) => {
                 this.video_list = response.data;
                 this.loading = false;
