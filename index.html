@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html  >
 <head>
+  <meta name="toTop" content="true">
   <meta charset="UTF-8">
   <title>First page</title>
 
@@ -85,6 +86,7 @@
       </div>
     </div>
 
+    
     <ul style="list-style: none;">
       <li v-for="(elem,index) in video_list.slice(0,number_of_show)">
         <div class="result">
@@ -117,13 +119,14 @@
         </div>
         <div class="blank-space"></div>
       </li>
+     
 
       <!--View more buttom-->
-      <button @click="AddShowNumber()" >view more</button>
+      <button class="view-more" @click="AddShowNumber()" v-if="show_view_more">view more</button>
     </ul>
 
     <!----------- Template ------------------------------------------------------------------------------->
-    <!-- <div>
+     <!-- <div>
       <div class="result">
         <div class="content1">
             <img src="./img/bingbing.png" height="120">   
@@ -153,7 +156,7 @@
         </div>
       </div>
     </div>
-    <div class="blank-space"></div> -->
+    <div class="blank-space"></div>  -->
     <!------------------------------------------------------------------------------------------>
 
     <!--Footer-->
@@ -166,6 +169,10 @@
 <!--Background---------------------------------------------------------------------------->
 
 <!--Background---------------------------------------------------------------------------->
+
+<!--Back to top-->
+<script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/toTop.js"></script>
 
 </body>
 </html>

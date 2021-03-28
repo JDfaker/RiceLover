@@ -12,7 +12,8 @@ new Vue({
             least_view_count: '0',
             sort_by: 'likeCount',
 
-            number_of_show: 1
+            number_of_show: 1,
+            show_view_more: false
         }
     },
     methods:{
@@ -33,6 +34,7 @@ new Vue({
             })
             //junmp to id result_point
             document.querySelector("#result_point").scrollIntoView(true);
+            this.show_view_more = true;
         },
         AddShowNumber(){
             this.number_of_show = this.number_of_show + 2
