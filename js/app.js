@@ -10,8 +10,9 @@ new Vue({
             video_to_date: '2021-1-1',
             least_like_count: '0',
             least_view_count: '0',
-            sort_by: 'likeCount'
+            sort_by: 'likeCount',
 
+            number_of_show: 1
         }
     },
     methods:{
@@ -30,14 +31,11 @@ new Vue({
                 this.video_list = response.data;
                 this.user_input = '';
             })
+            //junmp to id result_point
+            document.querySelector("#result_point").scrollIntoView(true);
         },
-        GetVideo(){
-            this.loading = true;
-            axios.get('http://localhost:8080/')
-            .then((response) => {
-                this.video_list = response.data;
-                this.loading = false;
-            });
+        AddShowNumber(){
+            this.number_of_show = this.number_of_show + 2
         }
     }
 })
