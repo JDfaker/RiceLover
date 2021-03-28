@@ -12,13 +12,14 @@ new Vue({
             least_view_count: '0',
             sort_by: 'likeCount',
 
-            number_of_show: 1,
+            number_of_show: 2,
             show_view_more: false
         }
     },
     methods:{
         GetUserInput(){
             this.video_list = [];
+            this.number_of_show = 2
             const article ={user_input: this.user_input, 
                             video_source: this.video_source, 
                             video_from_date: this.video_from_date, 
