@@ -91,7 +91,7 @@
       <li v-for="(elem,index) in video_list.slice(0,number_of_show)">
         <div class="result">
           <div class="content1">
-              <img :src="elem.thumbnails" height="120">   
+              <img :src="elem.thumbnails" height="150">   
           </div>
           <div class="content2">
             <div class="search-item">
@@ -120,10 +120,12 @@
         <div class="blank-space"></div>
       </li>
      
-
-      <!--View more buttom-->
-      <button class="view-more" @click="AddShowNumber()" v-if="show_view_more">view more</button>
     </ul>
+
+    <!--View more buttom-->
+    <div class="view-more" v-if='show_view_more'>
+      <button class="view-more" @click="AddShowNumber()" >view more</button>
+    </div>
 
     <!----------- Template ------------------------------------------------------------------------------->
      <!-- <div>

@@ -331,7 +331,9 @@ input[type=submit].blue:active {
 }
 
 .search-item .item-list {
+	height: 60px;
 	padding: 5px 0;
+	overflow: auto;	
 }
 
 .search-item .item-list ul {
@@ -491,7 +493,7 @@ input[type=submit].blue:active {
 	color: #666;
 	display:block;
 	margin:0 auto;
-	margin-top: 20px;
+	margin-top: 40px;
 }
 
 .footer{
@@ -501,7 +503,7 @@ input[type=submit].blue:active {
 
 .blank-space{
 	width: 100%;
-	height: 140px;
+	height: 160px;
 }
 
 .as-title{
