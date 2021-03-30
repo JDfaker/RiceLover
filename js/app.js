@@ -31,7 +31,8 @@ new Vue({
                             video_to_date: this.video_to_date,
                             least_like_count: this.least_like_count,
                             least_view_count: this.least_view_count,
-                            sort_by: this.sort_by};
+                            sort_by: this.sort_by,
+                            comprehensive_sort: this.comprehensive_sort};
             
             axios.post('http://localhost:8080/',article)
             .then((response) => {
