@@ -13,13 +13,17 @@ new Vue({
             sort_by: 'likeCount',
 
             number_of_show: 2,
-            show_view_more: false
+            show_view_more: false,
+
+            time_cost: 0,
+            num_of_result: 0,
         }
     },
     methods:{
         GetUserInput(){
+            alert(this.user_input)
             this.video_list = [];
-            this.number_of_show = 2
+            this.number_of_show = 2;
             const article ={user_input: this.user_input, 
                             video_source: this.video_source, 
                             video_from_date: this.video_from_date, 
@@ -32,6 +36,8 @@ new Vue({
             .then((response) => {
                 this.video_list = response.data;
                 this.user_input = '';
+                this.time_used = this.video_list[0].time_cost;
+                this.num_of_result = this.video_list[0].amount;
             })
             //junmp to id result_point
             document.querySelector("#result_point").scrollIntoView(true);

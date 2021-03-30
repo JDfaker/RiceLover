@@ -29,7 +29,7 @@
     <!--Search box-->
     <div class="search-box" style="z-index:999">
       <input type="search" placeholder="Search here..." v-model="user_input"/>
-      <button type="submit" class="search-btn" @click="GetUserInput()"><i class="fa fa-search"></i></button>
+      <button type="submit" class="search-btn" @keyup.enter="GetUserInput" @click="GetUserInput"><i class="fa fa-search"></i></button>
     </div>
 
     <!--Advanced search-->
@@ -82,7 +82,7 @@
     <!--Search Result-->
     <div id="wall">
       <div class="search-statu" id="result_point">
-          <span>Search Results</span>
+          <span>Search Results | Time cost: {{ time_cost }} | Number of result: {{ num_of_result }}</span>
       </div>
     </div>
 
