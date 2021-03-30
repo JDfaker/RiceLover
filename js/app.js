@@ -11,6 +11,7 @@ new Vue({
             least_like_count: '0',
             least_view_count: '0',
             sort_by: 'likeCount',
+            comprehensive_sort: 'disable',
 
             number_of_show: 2,
             show_view_more: false,
@@ -21,7 +22,7 @@ new Vue({
     },
     methods:{
         GetUserInput(){
-            alert(this.user_input)
+            alert(this.comprehensive_sort)
             this.video_list = [];
             this.number_of_show = 2;
             const article ={user_input: this.user_input, 

@@ -475,7 +475,7 @@ input[type=submit].blue:active {
 
 .advanced-search{
     width: 500px;
-    height: 300px;
+    height: 360px;
     border-radius: 40px;
 	background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 	margin: 0px auto;
@@ -733,6 +733,54 @@ input[type=submit].blue:active {
 	left: -9999px;
   }
   .styling1 input[type=radio]:checked + label:after {
+	background: radial-gradient(circle closest-side, transparent 4px, transparent 1px, #fff 6px);
+  }
+
+  .styling2 {
+	list-style: none;
+	
+	margin-bottom: 1em;
+  }
+  .styling2 li {
+	display: inline-block;
+	margin-right: 1em;
+	vertical-align: bottom;
+  }
+  .styling2 label {
+	position: relative;
+	display: inline-block;
+	padding-left: 20px;
+	line-height: 16px;
+	color: #a872ff;
+	font-weight: bold;
+  }
+  .styling2 label:before,
+  .styling2 label:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+  .styling2 label:before {
+	background: linear-gradient(#72B6FF, #a872ff);
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+  }
+  .styling2 label:after {
+	background: #fff;
+	border-radius: 50%;
+	width: 12px;
+	height: 12px;
+	margin-top: 2px;
+	margin-left: 2px;
+	transition: background 0.35s;
+  }
+  .styling2 input {
+	position: absolute;
+	left: -9999px;
+  }
+  .styling2 input[type=radio]:checked + label:after {
 	background: radial-gradient(circle closest-side, transparent 4px, transparent 1px, #fff 6px);
   }
 

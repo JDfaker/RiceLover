@@ -57,6 +57,15 @@
               <li><input type="radio" data-class='future' name="styling1" id="r33" v-model="sort_by" value="viewCount"><label for="r33">Through view</label></li>
             </ul>
           </div>
+
+          <div class="compr-sort">
+            <span>Comprehensive Sorting : </span>
+            <ul class="styling2">
+              <li><input type="radio" data-class='jelly' name="styling2" id="rr111" v-model="comprehensive_sort" value="disable"><label for="rr111">Disable</label></li>
+              <li><input type="radio" data-class='future' name="styling2" id="rr222" v-model="comprehensive_sort" value="enable"><label for="rr222">Enable</label></li>
+            </ul>
+          </div>
+
           <div class="released-date">
             <span>Released Date :</span>
             <input type="text" placeholder="From Year" v-model='video_from_date'>
